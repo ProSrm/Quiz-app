@@ -1,0 +1,87 @@
+.btn {
+  text-decoration: none;
+  color: brown;
+  background-color: aqua;
+  padding: 5px;
+  margin: auto;
+}
+
+.Menu {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  /* background: rgb(131, 58, 180); */
+  background: linear-gradient(
+    45deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(29, 253, 141, 0.6643791305584734) 53%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu button,
+.EndScreen button,
+.quiz button {
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: aqua;
+}
+
+/* ############################## Quiz css ############################## */
+
+.quiz,
+.EndScreen {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    40deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(29, 253, 141, 0.6643791305584734) 53%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  /* margin: 5px 10, 5, 10; */
+}
+
+.options div {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  align-self: center;
+  margin: 5% 0;
+}
+
+.options div label {
+  text-align: right;
+  padding: 5px;
+  color: white;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.options div input {
+  margin: 0;
+  padding: 5px;
+}

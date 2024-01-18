@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import MainMenu from './Components/MainMenu'
 import Quiz from './Components/Quiz'
@@ -9,17 +7,20 @@ import EndScreen from './Components/EndScreen'
 import { QuizContext } from './helpers/Contex'
 function App() {
   const [gameState, setGameState] = useState('Menu')
+  const [score, setScore] = useState(0)
 
   return (
     <>
-      <div>
-        <h1>Quiz app </h1>
-        <QuizContext.provider value={{ gameState, setGameState }}>
+      <QuizContext.Provider
+        value={{ gameState, setGameState, score, setScore }}
+      >
+        <div className="MainLayout">
+          <h2>Quick Quiz</h2>
           {gameState === 'Menu' && <MainMenu />}
           {gameState === 'Quiz' && <Quiz />}
-          {gameState === 'EndScreen' && <EncScreen />}
-        </QuizContext.provider>
-      </div>
+          {gameState === 'EndScreen' && <EndScreen />}
+        </div>
+      </QuizContext.Provider>
     </>
   )
 }
